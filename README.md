@@ -1,0 +1,1 @@
+Script from Firesight API Explorer to build out everything needed to update a network group within Cisco Firesight. I still have to deploy the configuration after the fact, but this is much better than what I was doing before.

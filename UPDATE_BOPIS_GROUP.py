@@ -80,20 +80,7 @@ api_path = "/api/fmc_config/v1/domain/e276abec-e0f2-11e3-8169-6d9ed49b625f/objec
 url = server + api_path
 if (url[-1] == '/'):
     url = url[:-1]
- 
-# PUT OPERATION
- 
-# The literals data is generated from the sql query and then generates this to be uploaded, this data is generated higher up in the program.
-# put_data = {
-#   "id": "005056A2-7618-0ed3-0000-515396143619",
-#   "name": "BOPIS_TEST",
-#   "type": "NetworkGroup",
-#   "objects": [
-#  ],
-#   "literals": [
-#  #data to be built from above
-#   ]
-# }
+
 try:
     # REST call with SSL verification turned off:
     r = requests.put(url, data=json.dumps(VLAN2LAN), headers=headers, verify=False)

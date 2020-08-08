@@ -35,30 +35,9 @@ for storenum in stores:
     stripped = (storenum.rstrip())
     cursor.execute("select [VID2NET] from tblDSlip where [Store #] = ?", stripped)
     LITERALS.append({'type' : "Network", 'value' : (str(cursor.fetchone()[0]) + '/28')})
-    #LITERALS.append({'value' : (str(cursor.fetchone()[0]) + '/28')})
 
 
 VLAN2LAN["literals"] = LITERALS
-
-# VLAN2LAN = ('{')
-# VLAN2LAN = (VLAN2LAN + '"id": "005056A2-7618-0ed3-0000-515396143619",')
-# VLAN2LAN = (VLAN2LAN + '"name": "BOPIS_TEST",')
-# VLAN2LAN = (VLAN2LAN + '"type": "NetworkGroup",')
-# VLAN2LAN = (VLAN2LAN + '"objects": [],')
-# VLAN2LAN = (VLAN2LAN + '"literals"' + ': ' + '[')
-
-# for storenum in stores:
-#     stripped = (storenum.rstrip())
-#     cursor.execute("select [VID2NET] from tblDSlip where [Store #] = ?", stripped)
-#     VLAN2LAN = (VLAN2LAN + ' {')
-#     VLAN2LAN = (VLAN2LAN + '"type": "Network", ')
-#     VLAN2LAN = (VLAN2LAN + '"value": ' + '"' + str(cursor.fetchone()[0]) + '/28' + '"')
-#     VLAN2LAN = (VLAN2LAN + '},')
-
-# VLAN2LAN = (VLAN2LAN + '{')
-# VLAN2LAN = (VLAN2LAN + '"type": "Network",')
-# VLAN2LAN = (VLAN2LAN + '"value": ' + '"1.1.1.0/24"')
-# VLAN2LAN = (VLAN2LAN + '}]}')
 
 
 stores.close()

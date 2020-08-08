@@ -1,4 +1,7 @@
 cred.py
-stores.txt
-ip_addresses.txt
+update_from_api_explorer.py
+*.txt
 Build_json.py
+.DS_Store
+__pycache__/
+build_sql_query.py

@@ -36,10 +36,10 @@ for storenum in stores:
     cursor.execute("select [VID2NET] from tblDSlip where [Store #] = ?", stripped)
     LITERALS.append({'type' : "Network", 'value' : (str(cursor.fetchone()[0]) + '/28')})
 
-
+#Merge the literals into the json
 VLAN2LAN["literals"] = LITERALS
 
-
+#Close the File
 stores.close()
 
 

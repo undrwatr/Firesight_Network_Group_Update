@@ -5,3 +5,5 @@ Build_json.py
 .DS_Store
 __pycache__/
 build_sql_query.py
+get systems pending a deployment.py
+push deployment.py
